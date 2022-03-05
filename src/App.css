@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.heading-primary {
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #d0bfff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-add {
+  position: relative;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 11px;
+}
+
+.input-add {
+  border-radius: 11px;
+  font-size: 16px;
+  border: none;
+  padding: 5px 10px;
+  width: 400px;
+}
+
+.btn-add {
+  position: absolute;
+  right: 0;
+  background-color: #ff8787;
+}
+
+.list-task {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 45%;
+}
+
+.item-task {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.task-name-container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.task-name {
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.btn-edit {
+  opacity: 0;
+  background-color: #d0bfff;
+}
+
+.item-task:hover .btn-edit {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.form-edit {
+  margin-left: 10px;
+  position: relative;
+}
+
+.input-edit {
+  width: 100%;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 9px;
+  border: none;
+}
+
+.btn-confirm {
+  background-color: #63e6be;
+  position: absolute;
+  right: 0;
+}
+
+.btn-delete {
+  margin-left: 20px;
+  background-color: #ff6b6b;
+}
+
+.completed-task {
+  color: #777;
+  text-decoration: line-through;
+}
+
+.btn-del-comp-tasks {
+  font-weight: 700;
+  background-color: #fa5252;
 }

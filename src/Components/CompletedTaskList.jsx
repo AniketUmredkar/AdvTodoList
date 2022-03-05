@@ -1,24 +1,23 @@
 import React from "react";
-import TaskItem from "./TaskItem";
-import "./TaskList.css";
+import CompletedTaskItem from "./CompletedTaskItem";
 
-function TaskList(props) {
+function CompletedTaskList(props) {
   return (
     <ul className="list-task">
-      {props.taskList.map((task, index) => {
+      {props.completedTaskList.map((task, index) => {
         return (
-          <TaskItem
+          <CompletedTaskItem
             task={task}
             key={index}
             taskList={props.taskList}
             setTaskList={props.setTaskList}
             completedTaskList={props.completedTaskList}
             setCompletedTaskList={props.setCompletedTaskList}
-          ></TaskItem>
+          ></CompletedTaskItem>
         );
       })}
     </ul>
   );
 }
 
-export default TaskList;
+export default CompletedTaskList;
